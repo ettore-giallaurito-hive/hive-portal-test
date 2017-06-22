@@ -1,6 +1,6 @@
 install:
   - git clone https://github.com/ettore-giallaurito-hive/wetzel.git
-  - cd wetzel
+  - cd wetzel/bin
 
 language: node_js
 node_js:
