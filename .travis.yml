@@ -1,8 +1,13 @@
+install:
+  - git clone https://github.com/ettore-giallaurito-hive/wetzel.git
+  - cd wetzel
+  - git checkout -qf wetzel
+
 language: node_js
 node_js:
   - "7"
 before_script:
   - npm install
 script:
-  - node app.js
+  - node wetzel.js test_schema_json.json
   - npm test
