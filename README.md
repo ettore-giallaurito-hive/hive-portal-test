@@ -4,7 +4,7 @@
 
 ---------------------------------------
 <a name="reference-dimmable-light"></a>
-## Dimmable Light
+## Dimmable Light 
 
 Information about a dimmable light
 
