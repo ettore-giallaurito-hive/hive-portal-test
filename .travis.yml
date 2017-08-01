@@ -7,9 +7,13 @@ script:
     
 after_success:
   - cd ..
-  - cat test.txt
+  - mkdir temp-git-folder
+  - cd temp-git-folder
+  - ls -lrt
   - git clone https://$GIT_USERNAME:$GIT_TOKEN@github.com/ConnectedHomes/hive-developer-portal.git
+  - ls -lrt
   - echo  $TRAVIS_BUILD_NUMBER > json-schemas-updated.txt
+  - cat json-schemas-updated.txt
   - git add . json-schemas-updated.txt
   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
   - git push origin master
