@@ -6,7 +6,9 @@ script:
     - mvn clean
     
 after_success:
+  - cd ..
   - echo  $TRAVIS_BUILD_NUMBER > test.txt
+  - cat test.txt
   - git remote add https://$GIT_USERNAME:$GIT_TOKEN@github.com/ConnectedHomes/hive-developer-portal.git > /dev/null 2>&1
   - git add . test.txt
   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
