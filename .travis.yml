@@ -12,6 +12,7 @@ after_success:
   - ls -lrt
   - git clone https://$GIT_USERNAME:$GIT_TOKEN@github.com/ConnectedHomes/hive-developer-portal.git
   - ls -lrt
+  - cd hive-developer-portal
   - echo  $TRAVIS_BUILD_NUMBER > json-schemas-updated.txt
   - cat json-schemas-updated.txt
   - git add . json-schemas-updated.txt
