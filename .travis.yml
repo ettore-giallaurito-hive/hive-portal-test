@@ -2,7 +2,9 @@ language: java
 
 sudo: false
 
-
+script:
+    - mvn clean
+    
 after_success:
   - echo  $TRAVIS_BUILD_NUMBER > test.txt
   - git add . test.txt
