@@ -10,4 +10,4 @@ after_success:
   - git remote add origin-dev-portal https://$GIT_USERNAME:$GIT_TOKEN@github.com/ConnectedHomes/hive-developer-portal.git > /dev/null 2>&1
   - git add . test.txt
   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-  - git push --quiet origin origin-dev-portal
+  - git push origin origin-dev-portal
