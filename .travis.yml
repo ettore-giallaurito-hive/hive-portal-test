@@ -16,5 +16,6 @@ after_success:
   - echo  $TRAVIS_BUILD_NUMBER > json-schemas-updated.txt
   - cat json-schemas-updated.txt
   - git add . json-schemas-updated.txt
+  - git status
   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
   - git push origin master
