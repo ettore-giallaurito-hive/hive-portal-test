@@ -6,18 +6,4 @@ script:
     - mvn clean
     
 after_success:
-  - cd ..
-  - mkdir temp-git-folder
-  - cd temp-git-folder
-  - ls -lrt
-  - git clone https://$GIT_USERNAME:$GIT_TOKEN@github.com/ConnectedHomes/hive-developer-portal.git
-  - ls -lrt
-  - cd hive-developer-portal
-  - echo  $TRAVIS_BUILD_NUMBER > json-schemas-updated.txt
-  - ls -lrt
-  - cat json-schemas-updated.txt
-  - git add json-schemas-updated.txt > /dev/null 2>&1
-  - git status
-  - git commit -a -m  'Travis build \$TRAVIS_BUILD_NUMBER'
-  - git status
-  - git push origin master
+  scrit: scripts/push-back.sh
