@@ -10,6 +10,9 @@ cd hive-developer-portal
 echo  $TRAVIS_BUILD_NUMBER > json-schemas-updated.txt
 ls -lrt
 cat json-schemas-updated.txt
+git add json-schemas-updated.txt
+git commit -m "Chnaged by $TRAVIS_BUILD_NUMBER"
+git push -u origin master
 rm -rf ../../temp-git-folder/
 
 
